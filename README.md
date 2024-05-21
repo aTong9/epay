@@ -59,7 +59,7 @@ https://www.blueskyxn.com/202207/6247.html
 
 代码解读、设计思路等请阅读我的博客 https://www.blueskyxn.com/202204/5884.html
 
-发起订单的方法是访问 https://your.domain/upay.php?n=88 【域名、文件名、金额等均可自定义】
+发起订单的方法是访问 https://epay-delta.vercel.app/upay.php?n=88 【域名、文件名、金额等均可自定义】
 
 体验地址 https://pay.skyit.uk/upay.php?n=50
 
