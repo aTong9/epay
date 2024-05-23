@@ -67,7 +67,7 @@ $amount = (double)$_GET["n"];//从URL参数中的n=*获取amount数据
 $notify_url='https://epay-delta.vercel.app';//Epusdt的异步回调地址，随便，无需管理的话
 $redirect_url='https://epay-delta.vercel.app';//Epusdt的同步跳转地址,付款成功后跳转到这里
 $order_id=(string)token(10);//生成随机数用于订单号
-$key='【yourkey】';//Epusdt的自定义密钥
+$key='https://epay-delta.vercel.app';//Epusdt的自定义密钥
 $str = 'amount='.$amount.'&notify_url='.$notify_url.'&order_id='.$order_id.'&redirect_url='.$redirect_url.$key;//拼接字符串用于MD5计算
 $signature = md5($str);//用MD5算法计算签名
 $data=json_encode(array( 'order_id' => $order_id,//生成数据包，用到了的数组转json的jsonencode
@@ -75,7 +75,7 @@ $data=json_encode(array( 'order_id' => $order_id,//生成数据包，用到了�
 'notify_url' => $notify_url,
 'redirect_url' => $redirect_url,
 'signature' => $signature));
-$res=curl_request('https://epay-delta.vercel.app/api/v1/order/create-transaction】',$data,'post');//发起Curl请求并获取返回数据到变量
+$res=curl_request('https://epay-delta.vercel.app/api/v1/order/create-transaction',$data,'post');//发起Curl请求并获取返回数据到变量
 //echo '<br/>换行符<br/>'; 
 //echo $data;
 //echo '<br/>换行符<br/>'; 
